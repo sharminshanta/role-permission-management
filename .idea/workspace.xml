@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fab431c0-3b9a-413c-9ac7-5afd9ce7d835" name="Default Changelist" comment="" />
+    <list default="true" id="fab431c0-3b9a-413c-9ac7-5afd9ce7d835" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-restful-api.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -101,6 +112,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1euOVD41S5mRwIT6XyER2ldgWtL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -109,7 +121,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sending-email" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -138,16 +150,47 @@
       <option name="presentableId" value="Default" />
       <updated>1595168112390</updated>
       <workItem from="1595168113737" duration="1792000" />
+      <workItem from="1595311474846" duration="527000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1595311767803</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595311767803</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="239" y="24" key="CommitChangelistDialog2" timestamp="1595311767510">
+      <screen x="49" y="24" width="1317" height="744" />
+    </state>
+    <state x="239" y="24" key="CommitChangelistDialog2/49.24.1317.744@49.24.1317.744" timestamp="1595311767510" />
     <state x="495" y="141" key="FileChooserDialogImpl" timestamp="1595202967456">
       <screen x="49" y="24" width="1317" height="744" />
     </state>
     <state x="495" y="141" key="FileChooserDialogImpl/49.24.1317.744@49.24.1317.744" timestamp="1595202967456" />
+    <state x="307" y="119" key="Vcs.Push.Dialog.v2" timestamp="1595311853640">
+      <screen x="49" y="24" width="1317" height="744" />
+    </state>
+    <state x="307" y="119" key="Vcs.Push.Dialog.v2/49.24.1317.744@49.24.1317.744" timestamp="1595311853640" />
+    <state x="480" y="323" key="git4idea.pull.GitPullDialog" timestamp="1595311884895">
+      <screen x="49" y="24" width="1317" height="744" />
+    </state>
+    <state x="480" y="323" key="git4idea.pull.GitPullDialog/49.24.1317.744@49.24.1317.744" timestamp="1595311884895" />
+    <state x="517" y="295" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1595311654625">
+      <screen x="49" y="24" width="1317" height="744" />
+    </state>
+    <state x="517" y="295" key="git4idea.remote.GitConfigureRemotesDialog/49.24.1317.744@49.24.1317.744" timestamp="1595311654625" />
   </component>
 </project>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/laravel-restful-api.iml" filepath="$PROJECT_DIR$/.idea/laravel-restful-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/role-permission-management.iml" filepath="$PROJECT_DIR$/.idea/role-permission-management.iml" />
     </modules>
   </component>
 </project>
