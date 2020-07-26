@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class RoleController extends Controller
+class DefaultController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-        return view('dashboard.roles');
+
     }
 
     /**
