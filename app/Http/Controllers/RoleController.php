@@ -39,14 +39,20 @@ class RoleController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(Request $request)
     {
-        //
+        $role = new Role([
+            'uuid' => "RL". substr(uniqid('', true), -4),
+            'name' => $request->input('name'),
+            'slug' => preg_replace('/\s+/', '-', strtolower($request->input('name')))
+        ]);
+
+        $role->save();
+
+        return response()->json('The role successfully added');
     }
 
     /**
@@ -92,5 +98,17 @@ class RoleController extends Controller
     public function destroy(Role $role)
     {
         //
+    }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function delete($id)
+    {
+        $role = Role::find($id);
+        $role->delete();
+
+        return response()->json('The role successfully deleted');
     }
 }
