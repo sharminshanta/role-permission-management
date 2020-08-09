@@ -1,5 +1,6 @@
 import DashboardView from './components/dashboard/Home';
 import RoleManage from './components/dashboard/roles/List';
+import LoginView from './components/LoginTemplate';
 
 export const routes = [
     {
@@ -8,7 +9,15 @@ export const routes = [
          */
         name: 'login',
         path: '/',
-        component: DashboardView
+        component: LoginView
+    },
+    {
+        /**
+         * Landing Page Portion
+         */
+        name: 'login',
+        path: '/login',
+        component: LoginView
     },
     {
         /**
