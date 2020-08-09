@@ -1,5 +1,6 @@
 import DashboardView from './components/dashboard/Home';
 import RoleManage from './components/dashboard/roles/List';
+import AddRole from './components/dashboard/roles/Add';
 import LoginView from './components/LoginTemplate';
 
 export const routes = [
@@ -31,8 +32,13 @@ export const routes = [
         /**
          * Roles
          */
-        name: 'AllRoles',
+        name: 'role-home',
         path: '/roles',
         component: RoleManage,
+    },
+    {
+        name: 'role-add',
+        path: '/role/add',
+        component: AddRole
     },
 ];
