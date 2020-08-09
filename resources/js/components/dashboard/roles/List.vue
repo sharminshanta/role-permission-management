@@ -42,7 +42,9 @@
                                                 <i class="fa fa-edit"></i>
                                             </a>
                                             <!--<router-link :to="'/role/edit/'+ role.slug" class="text-primary"><i class="fa fa-edit"></i></router-link>-->
-                                            <a href="" @click.prevent="deleteRole(role.id)" class="text-danger"><i class="fa fa-trash"></i></a>
+                                            <a title="Delete User Role" @click.prevent="deleteRole(role.id)" class="text-danger">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
                                         </div>
                                     </td>
                                 </tr>
@@ -131,7 +133,11 @@ export default {
         updateRoleModal() {
             $('#updateUserRole').modal('show');
         },
+        /*deleteAlert() {
+            alert('Are you sure to delete this ?');
+        },*/
         deleteRole(id) {
+            alert('Are you sure to delete this ?');
             this.axios
                 .delete(`http://localhost:8000/api/roles/delete/${id}`)
                 .then(response => {
