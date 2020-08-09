@@ -17,9 +17,10 @@
                     <div class="box-header header-custom">
                         <h5 class="box-title"><i class="fa fa-list"></i> List</h5>
                         <div class="box-tools pull-right">
-                            <button @click="addRoleModal" title='Add User Role' class='btn btn-inline btn-custom btn-md'>
+                            <!--<button @click="addRoleModal" title='Add User Role' class='btn btn-inline btn-custom btn-md'>
                                 <i class='fa fa-plus'></i>&nbsp;Add User Role
-                            </button>
+                            </button>-->
+                            <router-link to="/role/add" title="New User Role"><i class='fa fa-plus'></i>&nbsp;Add User Role</router-link>
                         </div>
                     </div>
                     <div class="box-body">
@@ -62,16 +63,17 @@
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h4 class="modal-title"><span><i class="fa fa-user-plus"></i></span>&nbsp;Add</h4>
                         </div>
-                        <div class="modal-body">
-                            <div class="form-group error-name">
-                                <label>Name <span class='text-danger'>*</span></label>
-                                <input type="text" class="form-control" name="usertype" id="usertype" placeholder="Name"/>
-                                <span class="text-red" id="error_usertype_name"></span>
+                        <form @submit.prevent="addRole">
+                            <div class="modal-body">
+                                <div class="form-group error-name">
+                                    <label>Name <span class='text-danger'>*</span></label>
+                                    <input type="text" class="form-control" name="name" id="usertype" placeholder="Name" required="required"/>
+                                </div>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-default insert">Save</button>
-                        </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Add Role</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -127,23 +129,41 @@ export default {
             });
     },
     methods: {
+        /**
+         * Role update and add modal
+         * Add modal of role are included here
+         */
         addRoleModal() {
             $('#addUserRole').modal('show');
         },
         updateRoleModal() {
             $('#updateUserRole').modal('show');
         },
-        /*deleteAlert() {
-            alert('Are you sure to delete this ?');
+
+        /**
+         * Role add, update and delete method
+         * All role's method for adding, updating and deleting are included here
+         */
+        /*addRole() {
+            this.axios
+                .post('http://localhost:8000/api/role/add', this.role)
+                .then(response => (
+                    this.$router.push({name: 'role-home'})
+                    // console.log(response.data)
+                ))
+                .catch(error => console.log(error))
+                .finally(() => this.loading = false)
         },*/
         deleteRole(id) {
-            alert('Are you sure to delete this ?');
-            this.axios
-                .delete(`http://localhost:8000/api/roles/delete/${id}`)
-                .then(response => {
-                    let i = this.roles.map(item => item.id).indexOf(id); // find index of your object
-                    this.roles.splice(i, 1)
-                });
+            var check = confirm('Are you sure to delete this ?');
+            if(check){
+                this.axios
+                    .delete(`http://localhost:8000/api/role/delete/${id}`)
+                    .then(response => {
+                        let i = this.roles.map(item => item.id).indexOf(id); // find index of your object
+                        this.roles.splice(i, 1)
+                    });
+            }
         }
     }
 }
