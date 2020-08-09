@@ -18,3 +18,13 @@ Route::middleware('auth:api')->get('user', function (Request $request) {
  */
 Route::get('/roles', 'RoleController@getRole'); //Role view
 
+/**
+ * All roles action routes
+ * Roles can be add, update and delete with this route
+ */
+Route::group(['prefix' => 'role'], function () {
+    Route::post('store', 'RoleController@store');
+    Route::get('edit/{id}', 'RoleController@edit');
+    Route::post('update/{id}', 'RoleController@update');
+    Route::delete('delete/{id}', 'RoleController@delete');
+});
