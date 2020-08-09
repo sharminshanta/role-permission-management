@@ -17,7 +17,10 @@
                     <div class="box-header header-custom">
                         <h5 class="box-title"><i class="fa fa-list"></i> List</h5>
                         <div class="box-tools pull-right">
-                            <button id='Add User Role' data-toggle='modal' data-target='#insert' title='Insert' class='btn btn-inline btn-custom btn-md'><i class='fa fa-plus'></i>&nbsp;Add User Role</button>        </div>
+                            <button @click="addRoleModal" title='Add User Role' class='btn btn-inline btn-custom btn-md'>
+                                <i class='fa fa-plus'></i>&nbsp;Add User Role
+                            </button>
+                        </div>
                     </div>
                     <div class="box-body">
                         <div id="hide-table">
@@ -35,7 +38,10 @@
                                     <td>{{ role.name }}</td>
                                     <td>
                                         <div class="btn-group" role="group">
-                                            <router-link :to="'/role/edit/'+ role.slug" class="text-primary"><i class="fa fa-edit"></i></router-link>
+                                            <a @click="updateRoleModal" title='Update User Role'>
+                                                <i class="fa fa-edit"></i>
+                                            </a>
+                                            <!--<router-link :to="'/role/edit/'+ role.slug" class="text-primary"><i class="fa fa-edit"></i></router-link>-->
                                             <a href="" @click.prevent="deleteRole(role.id)" class="text-danger"><i class="fa fa-trash"></i></a>
                                         </div>
                                     </td>
@@ -46,7 +52,7 @@
                     </div>
                 </div>
             </section>
-            <div class="modal fade" id="insert" tabindex="-1">
+            <div class="modal fade" id="addUserRole" tabindex="-1">
                 <div class="modal-dialog modal-sm">
                     <!-- Modal content-->
                     <div class="modal-content">
@@ -67,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="update" tabindex="-1">
+            <div class="modal fade" id="updateUserRole" tabindex="-1">
                 <div class="modal-dialog modal-sm">
                     <!-- Modal content-->
                     <div class="modal-content">
@@ -119,6 +125,12 @@ export default {
             });
     },
     methods: {
+        addRoleModal() {
+            $('#addUserRole').modal('show');
+        },
+        updateRoleModal() {
+            $('#updateUserRole').modal('show');
+        },
         deleteRole(id) {
             this.axios
                 .delete(`http://localhost:8000/api/roles/delete/${id}`)
